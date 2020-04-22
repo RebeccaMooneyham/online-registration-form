@@ -1,0 +1,79 @@
+/* ---- General Layout ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Header ---- */
+header {
+  background-color: #1c2e4a;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Signup Info---- */
+.signup {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 90%;
+  margin-bottom: 3px;
+  border-bottom: 4px solid #000;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.40em;
+  padding-bottom: .5em;
+}
+
+/* ---- Form ---- */
+form {
+  width: 90%;
+  border-top: 2px solid #000;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.contact label {
+  display: block;
+}
+
+/* ---- Footer ---- */
+
+
+
+/* ---- Media Queries ---- */
+@media only screen and (min-width: 768px) {
+
+}
