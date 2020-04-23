@@ -17,6 +17,12 @@ body {
   margin: auto;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ---- Header ---- */
 header {
   background-color: #1c2e4a;
@@ -72,7 +78,7 @@ label {
   font-size: 1.15em;
 }
 
-.change_background {
+.change-background {
   background-color: #bdc2cb;
   padding-left: .5em;
   padding-right: .5em;
@@ -80,10 +86,6 @@ label {
 
 hr {
   border-bottom: 3px solid #000;
-}
-
-.contact label {
-  display: block;
 }
 
 .contact input,
@@ -108,7 +110,7 @@ hr {
   color: #606060;
 }
 
-#zip_code {
+#zip-code {
   width: 50%;
 }
 
@@ -116,11 +118,11 @@ hr {
   font-size: 1.15em;
 }
 
-.select_newsletter {
+.select-newsletter {
   padding-bottom: 1.15em;
 }
 
-.news_format {
+.news-format {
   padding-top: 1.5em;
   padding-bottom: 1em;
 }
@@ -137,7 +139,7 @@ textarea:focus {
 
 /* ---- Newsletter Checkbox Styling ---- */
 /* Base styles for checkboxes */
-.news_box {
+.news-box {
   display: block;
   position: relative;
   padding-left: 1.5em;
@@ -150,7 +152,7 @@ textarea:focus {
 }
 
 /* Hide browser's default checkbox */
-.news_box input {
+.news-box input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -172,12 +174,12 @@ textarea:focus {
 }
 
 /* Add background color on hover */
-.news_box:hover input ~ .checkmark1 {
+.news-box:hover input ~ .checkmark1 {
   background-color: #bdc2cb;
 }
 
 /* Add background when the checkbox is checked */
-.news_box input:checked ~ .checkmark1 {
+.news-box input:checked ~ .checkmark1 {
   background-color: #1c2e4a;
   border: none;
 }
@@ -190,12 +192,12 @@ textarea:focus {
 }
 
 /* Show the checkmark when checked */
-.news_box input:checked ~ .checkmark1:after {
+.news-box input:checked ~ .checkmark1:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.news_box .checkmark1:after {
+.news-box .checkmark1:after {
   left: 6px;
   top: 2px;
   width: 3px;
@@ -210,7 +212,7 @@ textarea:focus {
 
 /* ---- Newsletter Radio Button Styling ---- */
 /* Base styles for radio buttons */
-.news_radio {
+.news-radio {
   display: block;
   position: relative;
   padding-left: 1.5em;
@@ -223,7 +225,7 @@ textarea:focus {
 }
 
 /* Hide browser's default radio button */
-.news_radio input {
+.news-radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -245,12 +247,12 @@ textarea:focus {
 }
 
 /* Add background color on hover */
-.news_radio:hover input ~ .checkmark2 {
+.news-radio:hover input ~ .checkmark2 {
   background-color: #bdc2cb;
 }
 
 /* Add background when the radio button is checked */
-.news_radio input:checked ~ .checkmark2 {
+.news-radio input:checked ~ .checkmark2 {
   background-color: #1c2e4a;
   border: none;
 }
@@ -263,12 +265,12 @@ textarea:focus {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.news_radio input:checked ~ .checkmark2:after {
+.news-radio input:checked ~ .checkmark2:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.news_radio .checkmark2:after {
+.news-radio .checkmark2:after {
   top: 6px;
   left: 6px;
   width: 5px;
@@ -319,11 +321,46 @@ button:hover {
 footer {
   padding-bottom: 2em;
   font-style: italic;
-
 }
 
 
 /* ---- Media Queries ---- */
 @media only screen and (min-width: 768px) {
 
+  .container {
+    max-width: 1000px;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+
+  .change-background {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .contact label {
+    display: inline-block;
+    padding-top: 1.15em;
+  }
+
+    .col-left {
+      float: left;
+      width: 35%;
+      margin-top: 6px;
+    }
+
+    .col-right {
+      float: left;
+      width: 65%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 }
