@@ -13,6 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 400px;
+  margin: auto;
 }
 
 /* ---- Header ---- */
@@ -52,7 +54,6 @@ h2 {
 form {
   width: 90%;
   border-top: 2px solid #000;
-  padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
 
@@ -63,14 +64,263 @@ fieldset {
 legend {
   font-size: 1.5em;
   font-weight: 800;
+  padding-top: 1em;
+  padding-bottom: .75em;
+}
+
+label {
+  font-size: 1.15em;
+}
+
+.change_background {
+  background-color: #bdc2cb;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+hr {
+  border-bottom: 3px solid #000;
 }
 
 .contact label {
   display: block;
 }
 
-/* ---- Footer ---- */
+.contact input,
+#state {
+  background-color: #f4f6f9;
+  border-radius: 5px;
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: .5em;
+  margin-bottom: 1.5em;
+}
 
+::placeholder {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.15em;
+  padding-right: 4px;
+}
+
+#state {
+  font-size: 1.15em;
+  color: #606060;
+}
+
+#zip_code {
+  width: 50%;
+}
+
+.newsletter p {
+  font-size: 1.15em;
+}
+
+.select_newsletter {
+  padding-bottom: 1.15em;
+}
+
+.news_format {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+input,
+textarea {
+  transition-duration: 1s;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #fbfde2;
+}
+
+/* ---- Newsletter Checkbox Styling ---- */
+/* Base styles for checkboxes */
+.news_box {
+  display: block;
+  position: relative;
+  padding-left: 1.5em;
+  cursor: pointer;
+  font-size: 1.25em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide browser's default checkbox */
+.news_box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* My custom checkbox */
+.checkmark1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 6px;
+}
+
+/* Add background color on hover */
+.news_box:hover input ~ .checkmark1 {
+  background-color: #bdc2cb;
+}
+
+/* Add background when the checkbox is checked */
+.news_box input:checked ~ .checkmark1 {
+  background-color: #1c2e4a;
+  border: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.news_box input:checked ~ .checkmark1:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.news_box .checkmark1:after {
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* ---- Newsletter Radio Button Styling ---- */
+/* Base styles for radio buttons */
+.news_radio {
+  display: block;
+  position: relative;
+  padding-left: 1.5em;
+  cursor: pointer;
+  font-size: 1.25em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide browser's default radio button */
+.news_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* My custom radio button */
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+
+/* Add background color on hover */
+.news_radio:hover input ~ .checkmark2 {
+  background-color: #bdc2cb;
+}
+
+/* Add background when the radio button is checked */
+.news_radio input:checked ~ .checkmark2 {
+  background-color: #1c2e4a;
+  border: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.news_radio input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.news_radio .checkmark2:after {
+  top: 6px;
+  left: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* ---- Textarea ---- */
+.other {
+  display: block;
+  padding-top: 2em;
+  padding-bottom: 1.25em;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #f4f6f9;
+  border: 1px solid #f4f6f9;
+  margin-bottom: 2em;
+}
+
+/* ---- Submit Button ---- */
+button {
+  padding: 19px 39px;
+  color: #FFF;
+  background-color: #1c2e4a;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #1c2e4a;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+
+button:hover {
+  background-color: #bdc2cb;
+  border: 1px solid #bdc2cb;
+  color: #282828;
+}
+
+/* ---- Footer ---- */
+footer {
+  padding-bottom: 2em;
+  font-style: italic;
+
+}
 
 
 /* ---- Media Queries ---- */
